@@ -1,0 +1,10 @@
+app:
+  name: Employee Management System
+
+spring:
+    application:
+        baseUrl: http://localhost:5000
+    jpa:
+        hibernate:
+            ddl-auto: validate  # options: none | validate | update | create | create-drop
+        show-sql: true
