@@ -1,5 +1,5 @@
 app:
-  name: Employee Management System
+  name: Employee Mgmt Sys (Dev)
 
 spring:
     application:
