@@ -8,3 +8,14 @@ spring:
         hibernate:
             ddl-auto: validate  # options: none | validate | update | create | create-drop
         show-sql: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/java?user=postgres&password=rootroot
+    driver-class-name: org.postgresql.Driver
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
