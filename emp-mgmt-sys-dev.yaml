@@ -14,7 +14,7 @@ spring:
   config:
     import: optional:file:.env[.properties]
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5433/ems?user=admin_user&password=r00tr00t}
+    url: jdbc:postgresql://localhost:5432/java?user=postgres&password=rootroot
     driver-class-name: org.postgresql.Driver
 
   mvc:
