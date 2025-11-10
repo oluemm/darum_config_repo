@@ -16,10 +16,10 @@ spring:
     url: jdbc:postgresql://localhost:5432/java?user=postgres&password=rootroot
     driver-class-name: org.postgresql.Driver
 
-  mvc:
-    servlet:
-      # Base URL for all REST endpoints + versioning
-      path: /api/v1
+  # mvc:
+  #   servlet:
+  # Base URL for all REST endpoints + versioning
+  #     path: /api/v1
 
 management:
   endpoints:
