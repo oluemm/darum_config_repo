@@ -34,3 +34,10 @@ server:
 springdoc:
   api-docs:
     enabled: true
+  swagger-ui:
+    operations-sorter: alpha
+    tags-sorter: alpha
+
+logging:
+  level:
+    root: info
