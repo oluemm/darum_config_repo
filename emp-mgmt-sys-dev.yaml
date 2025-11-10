@@ -13,7 +13,7 @@ spring:
       mode: always
 
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/emp_mgmt_sys}
+    url: ${DB_URL}
     driver-class-name: org.postgresql.Driver
 
   mvc:
