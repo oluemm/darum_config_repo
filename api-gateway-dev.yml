@@ -69,7 +69,10 @@ spring:
           - id: auth-service-openapi-definition
             uri: lb://AUTH-SERVICE
             predicates:
-            - Path=/api/v1/v3/api-docs/**
+            - Path=/v3/api-docs/auth/**
+            filters:
+            # - StripPrefix=1
+            - PrefixPath=/api/v1
 
 eureka:
   client:

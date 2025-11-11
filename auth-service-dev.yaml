@@ -49,6 +49,7 @@ management:
 springdoc:
   api-docs:
     enabled: true
+    path: /v3/api-docs/auth
   swagger-ui:
     url: /v3/api-docs/auth-service
     operations-sorter: alpha
