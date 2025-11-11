@@ -1,2 +1,5 @@
 app:
   name: Employee Management System
+
+server:
+  port: 5002

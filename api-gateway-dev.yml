@@ -1,12 +1,12 @@
 server:
-  port: 8082
+  port: 5000
 
 spring:
   cloud:
     gateway:
       discovery:
         locator:
-          enabled: true      # Automatically maps services from Eureka
+          enabled: true # Automatically maps services from Eureka
           lower-case-service-id: true
       globalcors:
         corsConfigurations:
@@ -15,18 +15,18 @@ spring:
             allowedMethods: "*"
             allowedHeaders: "*"
       routes:
-        - id: auth-service
-          uri: lb://auth-service
-          predicates:
-            - Path=/auth/**
-          filters:
-            - StripPrefix=1
-        - id: employee-service
-          uri: lb://employee-service
-          predicates:
-            - Path=/employees/**
-          filters:
-            - StripPrefix=1
+      - id: auth-service
+        uri: lb://auth-service
+        predicates:
+        - Path=/auth/**
+        filters:
+        - StripPrefix=1
+      - id: employee-service
+        uri: lb://employee-service
+        predicates: # deter,omines which requests are routed to this service
+        - Path=/employees/**
+        filters:
+        - StripPrefix=1
 
     config:
       fail-fast: true

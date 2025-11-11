@@ -1,2 +1,5 @@
 app:
   name: Authentication Service
+
+server:
+  port: 5002
