@@ -23,11 +23,6 @@ spring:
     locations: classpath:db/migration
     baseline-on-migrate: true
 
-  mvc:
-    servlet:
-      # Base URL for all REST endpoints + versioning
-      path: /api/v1
-
 eureka:
   client:
     service-url:
