@@ -17,6 +17,11 @@ spring:
     url: jdbc:postgresql://localhost:5432/java?user=postgres&password=rootroot
     driver-class-name: org.postgresql.Driver
 
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
   mvc:
     servlet:
       # Base URL for all REST endpoints + versioning
