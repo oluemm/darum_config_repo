@@ -50,7 +50,7 @@ springdoc:
   api-docs:
     enabled: true
   swagger-ui:
-    uri: /v3/api-docs/auth-service
+    url: /v3/api-docs/auth-service
     operations-sorter: alpha
     tags-sorter: alpha
 
