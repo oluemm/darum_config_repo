@@ -29,6 +29,7 @@ spring:
             uri: lb://EMP-MGMT-SYS
             predicates:
             - Path=/employee/**
+            - Path=/employee/*.png
             filters:
             - StripPrefix=1
             - PrefixPath=/api/v1/swagger-ui
