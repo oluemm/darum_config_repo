@@ -2,14 +2,14 @@ app:
   name: Employee Management System
 
 server:
-  port: 5002
+  port: 5001
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
   instance:
-    instance-id: ${spring.application.name}:${random.value}
+    instance-id: ${spring.application.name}
 
 management:
   endpoints:
