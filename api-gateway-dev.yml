@@ -70,6 +70,9 @@ spring:
             uri: lb://AUTH-SERVICE
             predicates:
             - Path=/v3/api-docs/auth/**
+            filters:
+            - StripPrefix=1
+            - PrefixPath=/api/v1
 
 eureka:
   client:
