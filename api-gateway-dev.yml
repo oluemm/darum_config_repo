@@ -46,7 +46,7 @@ spring:
             - Path=/api/auth/**
             filters:
             - StripPrefix=1
-            - PrefixPath=/api/v1
+            - PrefixPath=/
 
           # Auth Service OpenAPI Docs Route
           - id: auth-service-api-docs
@@ -54,7 +54,7 @@ spring:
             predicates:
             - Path=/auth/docs
             filters:
-            - RewritePath=/auth/docs, /api/v1/swagger-ui/index.html
+            - RewritePath=/auth/docs, /swagger-ui/index.html
 
           # Auth Service OpenAPI Docs Assets Route
           - id: auth-service-api-docs-assets
@@ -63,16 +63,13 @@ spring:
             - Path=/auth/**
             filters:
             - StripPrefix=1
-            - PrefixPath=/api/v1/swagger-ui
+            - PrefixPath=/swagger-ui
 
           # Auth Service OpenAPI Docs Specs Route
           - id: auth-service-openapi-definition
             uri: lb://AUTH-SERVICE
             predicates:
             - Path=/v3/api-docs/auth/**
-            filters:
-            - StripPrefix=1
-            - PrefixPath=/api/v1
 
 eureka:
   client:
