@@ -17,6 +17,15 @@ spring:
             - PrefixPath=/api/v1
             - Jwt
 
+          - id: department-service
+            uri: lb://EMP-MGMT-SYS
+            predicates:
+            - Path=/api//departments/**
+            filters:
+            - StripPrefix=1
+            - PrefixPath=/api/v1
+            - Jwt
+
           # Employee Management Service OpenAPI Docs Route
           - id: employee-service-api-docs
             uri: lb://EMP-MGMT-SYS
