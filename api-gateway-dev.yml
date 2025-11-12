@@ -20,7 +20,7 @@ spring:
           - id: department-service
             uri: lb://EMP-MGMT-SYS
             predicates:
-            - Path=/api//departments/**
+            - Path=/api/departments/**
             filters:
             - StripPrefix=1
             - PrefixPath=/api/v1
