@@ -94,4 +94,4 @@ logging:
 
 auth:
   service:
-    url: lb://AUTH-SERVICE
+    url: http://localhost:5000/api/auth
