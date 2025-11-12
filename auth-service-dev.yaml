@@ -49,6 +49,9 @@ springdoc:
     url: /v3/api-docs/auth
     operations-sorter: alpha
     tags-sorter: alpha
+  servers:
+  - url: http://localhost:5000/api/auth
+    description: AUTH-SERVICE(Via Gateway)
 
 logging:
   level:
